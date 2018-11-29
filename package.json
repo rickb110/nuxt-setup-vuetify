@@ -1,0 +1,26 @@
+{
+  "name": "rivid-blog",
+  "version": "1.0.0",
+  "description": "Final version for blog",
+  "author": "Richard",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0",
+    "vuetify": "^1.2.4"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.1",
+    "node-sass": "^4.10.0",
+    "nodemon": "^1.11.0",
+    "sass-loader": "^7.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  }
+}
