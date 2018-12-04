@@ -19,7 +19,9 @@ module.exports = {
 	  {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Zilla+Slab:400,700'}
     ]
   },
-
+router: {
+    middleware: 'languageDetection'
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -36,13 +38,15 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    '@/plugins/vuetify',
+	'@/plugins/components'
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+	['storyblok-nuxt', {accessToken: '5IxFmylLIwdyrPPuZbpTuwtt', cacheProvider: 'memory'}]	
   ],
 
   /*

@@ -7,19 +7,21 @@
       fixed
       app
     >
+	
+	
       <v-list>
         <v-list-tile
-          v-for="(item, i) in items"
-          :to="item.to"
-          :key="i"
+          v-for="(navitem, index) in $store.state.settings.main_navi"
+          :to="navitem.link.cached_url"
+          :key="index"
           router
           exact
         >
           <v-list-tile-action>
-            <v-icon v-html="item.icon" />
+            <v-icon v-html="navitem.icon" />
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title" />
+            <v-list-tile-title v-text="navitem.name" />
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -50,16 +52,12 @@
     data() {
       return {
         clipped: false,
-        drawer: true,
+        drawer: false,
         fixed: false,
-        items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-        ],
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'Vuetify.js'
+        title: 'General Title Goes Here'
       }
     }
   }

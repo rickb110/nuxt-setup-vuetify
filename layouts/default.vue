@@ -12,9 +12,9 @@
     </v-content>
  
    
-
+ <bottom-footer/>
   </v-app>
-  <bottom-footer/>
+ 
   </div>
 </template>
 

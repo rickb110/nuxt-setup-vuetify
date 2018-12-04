@@ -11,6 +11,16 @@
   </footer>
 </template>
 
+<script>
+  export default {
+    data() {
+      return {
+        fixed: false
+      }
+    }
+  }
+</script>
+
 <style lang="scss">
 .bottom-footer {
   background: #e3f2ed;
