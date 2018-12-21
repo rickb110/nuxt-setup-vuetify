@@ -42,7 +42,21 @@
 	  
 	  
       <v-toolbar-title v-text="title"/>
-      
+	  <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down" 
+		v-for="(navitem, index) in $store.state.settings.main_navi"
+          :to="navitem.link.cached_url"
+          :key="index"
+          router
+          exact
+		>
+	  
+      <v-btn 
+	  v-text="navitem.name" 
+	  :color="navitem.colour"
+	  :href="navitem.link.cached_url"
+	  depressed></v-btn>
+    </v-toolbar-items>
     </v-toolbar>
 	</header>
 </template>

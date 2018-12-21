@@ -1,7 +1,7 @@
 <template>
 <div>
 
-<v-app light>
+<v-app>
 <top-header/>
  
 <v-content>
@@ -9,7 +9,7 @@
 	  
         <nuxt />
       </v-container>
-    </v-content>
+</v-content>
  
    
  <bottom-footer/>
@@ -28,8 +28,12 @@ export default {
     BottomFooter
   }
 }
+
+
 </script>
 
 <style lang="scss">
 @import '../assets/scss/styles.scss';
+
+
 </style>
