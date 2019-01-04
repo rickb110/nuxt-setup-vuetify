@@ -34,6 +34,8 @@
       :clipped-left="clipped"
       fixed
       app
+	  dark
+	  color="primary"
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
       
@@ -41,7 +43,8 @@
 
 	  
 	  
-      <v-toolbar-title v-text="title"/>
+      <v-toolbar-title 
+		v-text="title" />
 	  <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down" 
 		v-for="(navitem, index) in $store.state.settings.main_navi"
