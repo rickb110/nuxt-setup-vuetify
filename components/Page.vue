@@ -1,11 +1,38 @@
 <template>
+<div>
+<GridCards/>
+
   <div v-editable="blok" class="page">
-    <component :key="blok._uid" v-for="blok in blok.body" :blok="blok" :is="blok.component"></component>
+       <v-toolbar color="indigo" dark>
+        <v-toolbar-title>Get In Touch</v-toolbar-title>
+        <v-spacer></v-spacer>
+      </v-toolbar>
+	  
+	  
+	<v-card>
+    <component :key="blok._uid" 
+	v-for="blok in blok.body" 
+	:blok="blok" 
+	:is="blok.component"
+	>
+	
+	</component>
+	
+	</v-card>
+
   </div>
+ </div> 
+  
 </template>
 
 <script>
+import GridCards from '~/components/GridCards.vue'
+
+
 export default {
-  props: ['blok']
+  props: ['blok'],
+  components: {
+	GridCards
+	}
 }
 </script>

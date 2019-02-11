@@ -1,3 +1,6 @@
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
+
 <template>
   <section class="util__container">
     <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component>
