@@ -1,24 +1,23 @@
 <template>
   <!--<div v-editable="blok" class="util__flex"> -->
-  <div>
+ 
   <v-container
                     fill-height
-                    fluid         					
+                    fluid
+					grid-list-lg
                   >
-	<v-layout row wrap>
+	<v-layout row>
     <!--//<component :key="blok._uid" v-for="blok in blok.columns" :blok="blok" :is="blok.component"></component> -->
-	<v-flex 
-	xs6
-	>
+
 	<v-card 
 	flat>
 	<NewsletterForm/>
 	</v-card>
 		<TwitterCard/>
-	</v-flex>
+
 	</v-layout>
 	</v-container>
-  </div>
+ 
 </template>
 
 <script>

@@ -1,15 +1,16 @@
 <template>
 <div>
+<v-container fluid grid-list-lg>
 <GridCards/>
 
-  <div v-editable="blok" class="page">
+<div v-editable="blok" class="page">
+
        <v-toolbar color="indigo" dark>
         <v-toolbar-title>Get In Touch</v-toolbar-title>
         <v-spacer></v-spacer>
       </v-toolbar>
 	  
-	  
-	<v-card>
+	  <v-card>
     <component :key="blok._uid" 
 	v-for="blok in blok.body" 
 	:blok="blok" 
@@ -21,6 +22,8 @@
 	</v-card>
 
   </div>
+  
+</v-container>
  </div> 
   
 </template>

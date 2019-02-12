@@ -3,7 +3,7 @@
     <v-text-field
       v-model="name"
       :error-messages="nameErrors"
-      :counter="10"
+      :counter="30"
       label="Name"
       required
       @input="$v.name.$touch()"
@@ -17,15 +17,6 @@
       @input="$v.email.$touch()"
       @blur="$v.email.$touch()"
     ></v-text-field>
-    <v-select
-      v-model="select"
-      :items="items"
-      :error-messages="selectErrors"
-      label="Item"
-      required
-      @change="$v.select.$touch()"
-      @blur="$v.select.$touch()"
-    ></v-select>
     <v-checkbox
       v-model="checkbox"
       :error-messages="checkboxErrors"
@@ -59,12 +50,6 @@
       name: '',
       email: '',
       select: null,
-      items: [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4'
-      ],
       checkbox: false
     }),
     computed: {
