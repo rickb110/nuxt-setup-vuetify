@@ -13,6 +13,7 @@
 	flat>
 	<NewsletterForm/>
 	</v-card>
+	<v-spacer></v-spacer>
 		<TwitterCard/>
 
 	</v-layout>

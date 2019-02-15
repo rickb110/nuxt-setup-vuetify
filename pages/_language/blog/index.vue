@@ -1,19 +1,34 @@
 <template>
-  <section class="util__container">
-    <div :key="blogPost.content._uid" v-for="blogPost in data.stories" class="blog__overview">
-      <h2>
-        <nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
-          {{ blogPost.content.name }}
-        </nuxt-link>
-      </h2>
-      <small>
-        {{ blogPost.published_at }}
-      </small>
-      <p>
-        {{ blogPost.content.intro }}
-      </p>
-    </div>
-  </section>
+
+<v-layout justify-center column>
+	<v-flex d-flex >
+		<v-card>
+				<v-title>Featured Post</v-title>
+		</v-card>
+		</v-flex>
+		<v-flex row wrap>
+			<v-container fluid grid-list-sm>
+			<section class="util__container">
+				<div :key="blogPost.content._uid" v-for="blogPost in data.stories" class="blog__overview">
+					<v-card>
+						<h2>
+						<nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
+						{{ blogPost.content.name }}
+						</nuxt-link>
+						</h2>
+						<small>
+						{{ blogPost.content.PublishDate }}
+						</small>
+						<p>
+						{{ blogPost.content.intro }}
+						</p>
+					</v-card>
+				</div>
+			</section>
+			</v-container>
+		</v-card>
+	</v-flex>
+</v-layout>
 </template>
 
 <script>

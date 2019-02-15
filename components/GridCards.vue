@@ -3,17 +3,17 @@
     <v-layout row wrap>
 		
       <v-flex d-flex xs12 sm6 md8>
-        <v-card color="indigo" dark>
+        <v-card color="indigo" hover dark>
 
           <v-card-title primary class="title">Richard Barrett SEO & PPC Specialist</v-card-title>
           <v-card-text>{{ Intro }}</v-card-text>
 
         </v-card>
       </v-flex>
-      <v-flex d-flex xs12 sm6 md3>
+      <v-flex d-flex xs12 sm6 md4 grow>
         <v-layout row wrap>
           <v-flex d-flex>
-            <v-card color="green" dark>
+            <v-card color="green" hover dark>
 
 			<v-card-title primary class="title">Tools</v-card-title>
 
@@ -30,6 +30,7 @@
                 <v-card
                   color="blue lighten-2"
                   dark
+				  hover
                 >
 				<v-card-title primary class="title">Latest Blog</v-card-title>
                   <v-card-text>{{ blog }}</v-card-text>

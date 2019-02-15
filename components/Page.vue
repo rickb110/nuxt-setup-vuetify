@@ -7,7 +7,7 @@
 
        <v-toolbar color="indigo" dark>
         <v-toolbar-title>Get In Touch</v-toolbar-title>
-        <v-spacer></v-spacer>
+        
       </v-toolbar>
 	  
 	  <v-card>
