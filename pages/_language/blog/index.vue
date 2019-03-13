@@ -1,20 +1,39 @@
 <template>
+<v-card>
+<v-container>
+<v-layout>
 
-<v-layout justify-center column>
-	<v-flex d-flex >
-		<v-card>
-				<v-title>Featured Post</v-title>
+	<v-flex column row wrap>
+		<div class="blog__overview">
+		
+		<v-card max-width='800' >
+		<v-container>
+		<v-img
+			src='/tiles.jpg'
+			aspect-ratio="1.5"
+			></v-img>
+				<v-title>What impact is internal linking having on your website</v-title>
+		</v-container>
 		</v-card>
-		</v-flex>
-		<v-flex row wrap>
-			<v-container fluid grid-list-sm>
+		</div>
+
+	
+		
+			<v-container>
 			<section class="util__container">
 				<div :key="blogPost.content._uid" v-for="blogPost in data.stories" class="blog__overview">
-					<v-card>
+					<v-card
+						hover
+						raised
+						:to="'/' + blogPost.full_slug"
+						:color="blogPost.Colour"
+						>
+					
+						<v-container>
 						<h2>
-						<nuxt-link class="blog__detail-link" :to="'/' + blogPost.full_slug">
+						
 						{{ blogPost.content.name }}
-						</nuxt-link>
+						
 						</h2>
 						<small>
 						{{ blogPost.content.PublishDate }}
@@ -22,19 +41,28 @@
 						<p>
 						{{ blogPost.content.intro }}
 						</p>
+						</v-container>
+						
 					</v-card>
 				</div>
 			</section>
 			</v-container>
-		</v-card>
+		
+		
 	</v-flex>
+	
 </v-layout>
+</v-container>
+</v-card>
 </template>
 
 <script>
 export default {
   data () {
-    return { total: 0, data: { stories: [] } }
+    return { 
+		total: 0, data: { stories: [] }
+		
+		}
   },
   asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
