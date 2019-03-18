@@ -58,7 +58,10 @@
 	  v-text="navitem.name" 
 	  :color="navitem.colour"
 	  :href="navitem.link.cached_url"
-	  depressed></v-btn>
+	  
+	  flat
+	  
+	  ></v-btn>
     </v-toolbar-items>
     </v-toolbar>
 	</header>

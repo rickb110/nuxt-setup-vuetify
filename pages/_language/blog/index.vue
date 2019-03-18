@@ -25,8 +25,9 @@
 					<v-card
 						hover
 						raised
+						dark
 						:to="'/' + blogPost.full_slug"
-						:color="blogPost.Colour"
+						:color="blogPost.content.colour"
 						>
 					
 						<v-container>
