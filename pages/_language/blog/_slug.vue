@@ -1,11 +1,20 @@
 <template>
-  <section class="util__container">
-    <div v-editable="story.content" class="blog">
-      <h1>{{ story.content.name }}</h1>
-      <div class="blog__body" v-html="body">
-      </div>
-    </div>
-  </section>
+<v-container bg fill-height grid-list-md >
+<v-layout row wrap align-center>
+<v-flex>
+<div v-editable="story.content" class="blog">
+<v-card max-width='1000'>
+
+	  <v-img contain :src="story.content.image"></v-img>
+      <v-card-text><h1>{{ story.content.name }}</h1></v-card-text>
+      <v-card-text><div class="blog__body" v-html="body">
+      </div></v-card-text>
+		
+</v-card>
+</div>
+</v-flex>
+</v-layout>
+</v-container>
 </template>
 
 <script>
@@ -42,14 +51,16 @@ export default {
 <style lang="scss">
 .blog {
   padding: 0 20px;
-  max-width: 600px;
-  margin: 40px auto 100px;
+  max-width: 800px;
+  margin: 0px auto 100px;
 
   img {
     width: 100%;
     height: auto;
   }
 }
+
+
 
 .blog__body {
   line-height: 1.6;

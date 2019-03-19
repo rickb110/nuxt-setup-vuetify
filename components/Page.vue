@@ -6,7 +6,7 @@
 <div v-editable="blok" class="page">
 
        <v-toolbar color="indigo" dark>
-        <v-toolbar-title>Get In Touch</v-toolbar-title>
+        <v-toolbar-title>Keep In Touch</v-toolbar-title>
         
       </v-toolbar>
 	  

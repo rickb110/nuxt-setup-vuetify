@@ -1,5 +1,6 @@
 <template>
-<v-card>
+<v-layout align-center justify-center>
+<v-card max width='1200'>
 <v-container>
 <v-layout>
 
@@ -27,7 +28,7 @@
 						raised
 						dark
 						:to="'/' + blogPost.full_slug"
-						:color="blogPost.content.colour"
+						:color=whichColor()
 						>
 					
 						<v-container>
@@ -55,15 +56,18 @@
 </v-layout>
 </v-container>
 </v-card>
+</v-layout>
 </template>
 
 <script>
 export default {
   data () {
     return { 
-		total: 0, data: { stories: [] }
-		
-		}
+total: 0,
+data: { stories: [] },
+colors: ['indigo', 'red lighten-2', 'green lighten-2', 'blue lighten-2', 'teal' ],
+colorpos: 0
+}
   },
   asyncData (context) {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
@@ -77,6 +81,17 @@ export default {
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
+  },
+  methods: {
+  whichColor() {
+  var position = this.colorpos + 1
+  if (position > this.colors.length) {
+  position = 1
+  }
+  this.colorpos = position
+  return this.colors[(position - 1)]
+
+  }
   }
 }
 </script>

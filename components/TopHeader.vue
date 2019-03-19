@@ -45,6 +45,7 @@
 	  
       <v-toolbar-title 
 		v-text="title" />
+		
 	  <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down" 
 		v-for="(navitem, index) in $store.state.settings.main_navi"
@@ -77,7 +78,7 @@
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'General Title Goes Here'
+        title: 'Rivid Blog'
       }
     }
   }
