@@ -83,6 +83,7 @@
     methods: {
       submit () {
         this.$v.$touch()
+		window.alert(this.$v.email);
       },
       clear () {
         this.$v.$reset()
